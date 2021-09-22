@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context=".MainActivity">
 
     <include
@@ -15,8 +14,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:background="@drawable/ic_coin_bg"
-        android:backgroundTint="#FDD835"
+        android:background="@drawable/bg_gradient"
         android:backgroundTintMode="add"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -34,13 +32,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Valor"
+
+            app:boxStrokeColor="@color/black"
+            app:hintTextColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -99,6 +101,7 @@
             android:layout_marginTop="16dp"
             android:gravity="center"
             android:text="Converter"
+            android:enabled="false"
             android:textAllCaps="false"
             android:textStyle="bold"
             app:backgroundTint="@color/App_primary_color"
